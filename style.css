@@ -82,6 +82,8 @@ section:not(:first-child) {
     background: #ffffff;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
   .cv-section + .cv-section {
     padding-top: 0;
@@ -118,21 +120,23 @@ section:not(:first-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 1.5rem;
   gap: 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.cv-heading__text {
+.cv-heading__title {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
-.cv-heading__text h1 {
+.cv-heading__title h1 {
   font-size: 1.75rem;
 }
-.cv-heading__text ul {
+.cv-heading__title ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -146,6 +150,15 @@ section:not(:first-child) {
   width: 100px;
   height: 100px;
   border-radius: 5px;
+}
+.cv-heading__text {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 100%;
+}
+.cv-heading__text > *:last-child {
+  margin-bottom: 0;
 }
 
 .contact-me {

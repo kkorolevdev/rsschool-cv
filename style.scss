@@ -92,6 +92,7 @@ section {
 		background: $background-section;
 		border: 1px solid $color-border;
 		border-radius: $border-radius;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
 		& + .cv-section {
 			padding-top: 0;
@@ -132,11 +133,12 @@ section {
 
 .cv-heading {
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: $spacer * 1.5;
 	gap: $spacer * 1.5;
 	align-items: center;
 
-	&__text {
+	&__title {
 		order: 2;
 
 		h1 {
@@ -157,6 +159,15 @@ section {
 			width: 100px;
 			height: 100px;
 			border-radius: $border-radius;
+		}
+	}
+
+	&__text {
+		order: 3;
+		width: 100%;
+
+		>*:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
