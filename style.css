@@ -13,7 +13,7 @@ body {
   }
 }
 
-h3 {
+h4 {
   font-size: 1.25rem;
 }
 
@@ -34,18 +34,20 @@ h3 {
     border-radius: 5px 5px 0 0;
   }
 }
-
-.section-heading {
+.cv-section .section-heading {
   width: 100%;
+  margin-bottom: 1rem;
   font-family: "Imbue", serif;
   font-weight: 600;
   border-bottom: 1px solid #e1e1e1;
 }
-
-.section-sub-heading {
+.cv-section .section-sub-heading {
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+.cv-section > *:last-child {
+  margin-bottom: 0;
 }
 
 section {
@@ -96,4 +98,8 @@ section:not(:last-child) {
 }
 .contact-me i {
   margin-right: 0.5rem;
+}
+
+.education h4 {
+  margin-bottom: 0;
 }

@@ -30,6 +30,10 @@ h2 {
 }
 
 h3 {
+	
+}
+
+h4 {
 	font-size: 1.25rem;
 }
 
@@ -51,19 +55,24 @@ h3 {
 			border-radius: $border-radius $border-radius 0 0;
 		}
 	}
-}
 
-.section-heading {
-	width: 100%;
-	font-family: $font-heading;
-	font-weight: 600;
-	border-bottom: 1px solid $color-border;
-}
+	.section-heading {
+		width: 100%;
+		margin-bottom: 1rem;
+		font-family: $font-heading;
+		font-weight: 600;
+		border-bottom: 1px solid $color-border;
+	}
+	
+	.section-sub-heading {
+		font-size: 0.875rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
 
-.section-sub-heading {
-	font-size: 0.875rem;
-	font-weight: 700;
-	text-transform: uppercase;
+	>*:last-child {
+		margin-bottom: 0;
+	}
 }
 
 section {
@@ -110,5 +119,11 @@ section {
 
 	i {
 		margin-right: $spacer * 0.5;
+	}
+}
+
+.education {
+	h4 {
+		margin-bottom: 0;
 	}
 }
