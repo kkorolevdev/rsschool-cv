@@ -1,6 +1,8 @@
 $spacer: 1rem;
 $color-primary: #262626;
 $color-border: #e1e1e1;
+$color-link: #0d6efd;
+$color-link-hover: #ff0000;
 $background: #f1f1f1;
 $background-section: #ffffff;
 $font-primary: '';
@@ -21,6 +23,47 @@ body {
 	}
 }
 
+a {
+	color: $color-link;
+	transition: 0.1s ease-in-out;
+
+	&:hover {
+		color: $color-link-hover;
+	}
+}
+
+header {
+	position: fixed;
+	z-index: 1000;
+	background: $background-section;
+	border-bottom: 1px solid $color-border;
+	box-shadow: 0 0 $spacer* 0.5 rgba(0, 0, 0, 0.05);
+}
+
+main {
+	&:before {
+		display: block;
+		width: 100%;
+		height: 57px;
+		content: '';
+	}
+}
+
+.navbar-brand {
+	@media ( min-width: 992px ) {
+		display: none;
+	}
+}
+
+.navbar-nav {
+	width: 100%;
+	justify-content: center;
+
+	a:hover {
+		color: $color-link-hover;
+	}
+}
+
 section {
 	width: 100%;
 	margin: 0;
@@ -35,6 +78,9 @@ section {
 }
 
 .cv-section {
+	max-width: 624px;
+	margin: 0 auto;
+
 	@media ( min-width: 768px ) {
 		padding: $spacer * 2;
 		background: $background-section;
@@ -72,35 +118,6 @@ section {
 	}
 }
 
-header {
-	position: fixed;
-	z-index: 1000;
-	background: $background-section;
-	border-bottom: 1px solid $color-border;
-	box-shadow: 0 0 $spacer* 0.5 rgba(0, 0, 0, 0.05);
-}
-
-main {
-	&:before {
-		display: block;
-		width: 100%;
-		height: 57px;
-		content: '';
-	}
-}
-
-
-.navbar-brand {
-	@media ( min-width: 992px ) {
-		display: none;
-	}
-}
-
-.navbar-nav {
-	width: 100%;
-	justify-content: center;
-}
-
 .cv-heading {
 	display: flex;
 	margin-top: $spacer * 1.5;
@@ -136,9 +153,39 @@ main {
 	}
 }
 
-.education {
+.cv-skills {
+	pre {
+		background-color: $color-primary;
+		color: $background-section;
+		border-radius: $border-radius;
+	}
+}
+
+.cv-education {
 	h4 {
 		margin-bottom: 0;
 		font-size: 1.25rem;
+	}
+}
+
+.cv-footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	&__content {
+		display: flex;
+		width: 100%;
+		max-width: 624px;
+		padding: $spacer * 2;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__school {
+		img {
+			height: 32px;
+			aspect-ratio: 100/37;
+		}
 	}
 }

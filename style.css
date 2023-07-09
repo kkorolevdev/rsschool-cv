@@ -13,6 +13,47 @@ body {
   }
 }
 
+a {
+  color: #0d6efd;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+a:hover {
+  color: #ff0000;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e1e1e1;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+main:before {
+  display: block;
+  width: 100%;
+  height: 57px;
+  content: "";
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+.navbar-nav {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.navbar-nav a:hover {
+  color: #ff0000;
+}
+
 section {
   width: 100%;
   margin: 0;
@@ -26,6 +67,10 @@ section:not(:first-child) {
   }
 }
 
+.cv-section {
+  max-width: 624px;
+  margin: 0 auto;
+}
 @media (min-width: 768px) {
   .cv-section {
     padding: 2rem;
@@ -57,35 +102,6 @@ section:not(:first-child) {
 }
 .cv-section > *:last-child {
   margin-bottom: 0;
-}
-
-header {
-  position: fixed;
-  z-index: 1000;
-  background: #ffffff;
-  border-bottom: 1px solid #e1e1e1;
-  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
-}
-
-main:before {
-  display: block;
-  width: 100%;
-  height: 57px;
-  content: "";
-}
-
-@media (min-width: 992px) {
-  .navbar-brand {
-    display: none;
-  }
-}
-
-.navbar-nav {
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .cv-heading {
@@ -126,7 +142,40 @@ main:before {
   margin-right: 0.5rem;
 }
 
-.education h4 {
+.cv-skills pre {
+  background-color: #262626;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.cv-education h4 {
   margin-bottom: 0;
   font-size: 1.25rem;
+}
+
+.cv-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cv-footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 624px;
+  padding: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cv-footer__school img {
+  height: 32px;
+  aspect-ratio: 100/37;
 }
