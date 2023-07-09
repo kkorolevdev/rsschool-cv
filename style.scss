@@ -1,4 +1,11 @@
 $spacer: 1rem;
+$color-primary: #262626;
+$color-border: #e1e1e1;
+$background: #f1f1f1;
+$background-section: #ffffff;
+$font-primary: '';
+$font-heading: 'Imbue', serif;
+$border-radius: 5px;
 
 html {
 	font-size: 16px;
@@ -7,6 +14,56 @@ html {
 body {
 	margin: 0;
 	font-size: 1rem;
+	color: $color-primary;
+
+	@media ( min-width: 768px ) {
+		background: $background;
+	}
+}
+
+h1, h2, h3 {
+	
+}
+
+h2 {
+	
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+.cv-section {
+	@media ( min-width: 768px ) {
+		padding: $spacer * 2;
+		background: $background-section;
+		border: 1px solid $color-border;
+		border-radius: $border-radius;
+
+		& + .cv-section {
+			padding-top: 0;
+			border-top: none;
+			border-radius: 0 0 $border-radius $border-radius;
+		}
+
+		&:not(:last-child) {
+			border-bottom: none;
+			border-radius: $border-radius $border-radius 0 0;
+		}
+	}
+}
+
+.section-heading {
+	width: 100%;
+	font-family: $font-heading;
+	font-weight: 600;
+	border-bottom: 1px solid $color-border;
+}
+
+.section-sub-heading {
+	font-size: 0.875rem;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 section {
@@ -44,5 +101,14 @@ section {
 			height: 100px;
 			border-radius: 5px;
 		}
+	}
+}
+
+.contact-me {
+	padding: 0;
+	list-style-type: none;
+
+	i {
+		margin-right: $spacer * 0.5;
 	}
 }
