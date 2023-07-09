@@ -7,16 +7,44 @@ body {
   font-size: 1rem;
 }
 
-#about img {
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin: 0 1rem 1rem 0;
-  border-radius: 5px;
+section {
+  width: 100%;
+  margin: 0;
 }
-#about ul {
+section:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media (min-width: 1200px) {
+  section:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.cv-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cv-heading__text {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.cv-heading__text ul {
+  padding: 0;
   list-style-type: none;
 }
-#about ul li {
-  padding: 0;
+.cv-heading__photo {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.cv-heading__photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
 }

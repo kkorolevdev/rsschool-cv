@@ -1,3 +1,5 @@
+$spacer: 1rem;
+
 html {
 	font-size: 16px;
 }
@@ -7,20 +9,40 @@ body {
 	font-size: 1rem;
 }
 
-#about {
-	img {
-		float: left;
-		width: 100px;
-		height: 100px;
-		margin: 0 1rem 1rem 0;
-		border-radius: 5px;
+section {
+	width: 100%;
+	margin: 0;
+
+	&:not(:last-child) {
+		margin-bottom: $spacer * 1;
+		
+		@media ( min-width: 1200px ) {
+			margin-bottom: $spacer * 2.5;
+		}
+	}
+}
+
+.cv-heading {
+	display: flex;
+	gap: $spacer * 1.5;
+	align-items: center;
+
+	&__text {
+		order: 2;
+
+		ul {
+			padding: 0;
+			list-style-type: none;
+		}
 	}
 
-	ul {
-		list-style-type: none;
+	&__photo {
+		order: 1;
 
-		li {
-			padding: 0;
+		img {
+			width: 100px;
+			height: 100px;
+			border-radius: 5px;
 		}
 	}
 }
