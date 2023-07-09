@@ -21,6 +21,19 @@ body {
 	}
 }
 
+section {
+	width: 100%;
+	margin: 0;
+
+	&:not(:first-child) {
+		padding-top: $spacer * 1;
+		
+		@media ( min-width: 1200px ) {
+			padding-top: $spacer * 2.5;
+		}
+	}
+}
+
 .cv-section {
 	@media ( min-width: 768px ) {
 		padding: $spacer * 2;
@@ -59,24 +72,12 @@ body {
 	}
 }
 
-section {
-	width: 100%;
-	margin: 0;
-
-	&:not(:last-child) {
-		margin-bottom: $spacer * 1;
-		
-		@media ( min-width: 1200px ) {
-			margin-bottom: $spacer * 2.5;
-		}
-	}
-}
-
 header {
 	position: fixed;
 	z-index: 1000;
 	background: $background-section;
 	border-bottom: 1px solid $color-border;
+	box-shadow: 0 0 $spacer* 0.5 rgba(0, 0, 0, 0.05);
 }
 
 main {

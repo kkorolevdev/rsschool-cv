@@ -13,6 +13,19 @@ body {
   }
 }
 
+section {
+  width: 100%;
+  margin: 0;
+}
+section:not(:first-child) {
+  padding-top: 1rem;
+}
+@media (min-width: 1200px) {
+  section:not(:first-child) {
+    padding-top: 2.5rem;
+  }
+}
+
 @media (min-width: 768px) {
   .cv-section {
     padding: 2rem;
@@ -46,24 +59,13 @@ body {
   margin-bottom: 0;
 }
 
-section {
-  width: 100%;
-  margin: 0;
-}
-section:not(:last-child) {
-  margin-bottom: 1rem;
-}
-@media (min-width: 1200px) {
-  section:not(:last-child) {
-    margin-bottom: 2.5rem;
-  }
-}
-
 header {
   position: fixed;
   z-index: 1000;
   background: #ffffff;
   border-bottom: 1px solid #e1e1e1;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
 }
 
 main:before {
